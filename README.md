@@ -1,4 +1,4 @@
-\# Seminário T05 — Kubernetes
+# Seminário T05 — Kubernetes
 
 
 
@@ -8,23 +8,23 @@ Professor Diogo Rodrigues
 
 
 
-\## Integrantes
+## Integrantes
 
 
 
-\- Alessandro Mathews Cardoso Dornelas dos Santos
+- Alessandro Mathews Cardoso Dornelas dos Santos
 
-\- Eduardo Rafael Silva Santos
+- Eduardo Rafael Silva Santos
 
-\- Gabryella Tainá Melo Silva
+- Gabryella Tainá Melo Silva
 
-\- Luís Gabriel da Silva Araújo
+- Luís Gabriel da Silva Araújo
 
-\- Victhor Emanuel Soares Brito
+- Victhor Emanuel Soares Brito
 
 
 
-\## Objetivo
+## Objetivo
 
 
 
@@ -34,7 +34,7 @@ uma aplicação web Nginx pelo navegador.
 
 
 
-\## Arquitetura
+## Arquitetura
 
 
 
@@ -54,33 +54,33 @@ Os recursos ficam no namespace `t05-demo`.
 
 
 
-\## Estrutura
+## Estrutura
 
 
 
-\- `k8s/aplicacao.yaml` — configuração Kubernetes.
+- `k8s/aplicacao.yaml` — configuração Kubernetes.
 
-\- `slides/` — apresentação editável e PDF.
+- `slides/` — apresentação editável e PDF.
 
-\- `docs/` — roteiro de apresentação e demonstração.
-
-
-
-\## Requisitos
+- `docs/` — roteiro de apresentação e demonstração.
 
 
 
-\- Windows 11, usado como ambiente de referência.
+## Requisitos
 
-\- Virtualização habilitada no firmware.
 
-\- WSL 2 configurado.
 
-\- Docker Desktop funcionando com backend WSL 2.
+- Windows 11, usado como ambiente de referência.
 
-\- Minikube instalado.
+- Virtualização habilitada no firmware.
 
-\- Internet para os downloads iniciais.
+- WSL 2 configurado.
+
+- Docker Desktop funcionando com backend WSL 2.
+
+- Minikube instalado.
+
+- Internet para os downloads iniciais.
 
 
 
@@ -122,7 +122,7 @@ minikube -p seminario kubectl -- version
 
 
 
-\## Preparação
+## Preparação
 
 
 
@@ -170,7 +170,7 @@ O resultado esperado é o nó `seminario` com status `Ready`.
 
 
 
-\## Implantação
+## Implantação
 
 
 
@@ -198,7 +198,7 @@ minikube -p seminario kubectl -- -n t05-demo rollout status deployment/site --ti
 
 
 
-\## Verificação
+## Verificação
 
 
 
@@ -218,11 +218,11 @@ Resultado esperado
 
 
 
-\- Deployment `site` com três réplicas prontas.
+- Deployment `site` com três réplicas prontas.
 
-\- Três Pods com `READY 1/1` e status `Running`.
+- Três Pods com `READY 1/1` e status `Running`.
 
-\- Service `site` do tipo NodePort.
+- Service `site` do tipo NodePort.
 
 
 
@@ -242,7 +242,7 @@ minikube -p seminario kubectl -- -n t05-demo get endpointslices -l kubernetes.io
 
 
 
-\## Acesso à aplicação
+## Acesso à aplicação
 
 
 
@@ -272,7 +272,7 @@ Encerrar com Ctrl+C ao terminar.
 
 
 
-\## Limpeza
+## Limpeza
 
 
 
@@ -306,39 +306,39 @@ Depois, encerrar o Docker Desktop usando “Quit Docker Desktop”.
 
 
 
-\## Limitações
+## Limitações
 
 
 
-\- Cluster com um único nó.
+- Cluster com um único nó.
 
-\- Réplicas compartilham os recursos da mesma máquina.
+- Réplicas compartilham os recursos da mesma máquina.
 
-\- Aplicação sem banco de dados ou persistência.
+- Aplicação sem banco de dados ou persistência.
 
-\- Acesso local fornecido pelo Minikube.
+- Acesso local fornecido pelo Minikube.
 
-\- Exemplo sem HTTPS e observabilidade completa.
+- Exemplo sem HTTPS e observabilidade completa.
 
-\- A tag `nginx:stable` é mutável. Registrar a referência testada e
+- A tag `nginx:stable` é mutável. Registrar a referência testada e
 
 &#x20; fixar uma versão ou digest antes da entrega final.
 
 
 
-\## Fontes e créditos
+## Fontes e créditos
 
 
 
-\- Kubernetes — https://kubernetes.io/docs/
+- Kubernetes — https://kubernetes.io/docs/
 
-\- Deployments — https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+- Deployments — https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 
-\- Services — https://kubernetes.io/docs/concepts/services-networking/service/
+- Services — https://kubernetes.io/docs/concepts/services-networking/service/
 
-\- Minikube — https://minikube.sigs.k8s.io/docs/start/
+- Minikube — https://minikube.sigs.k8s.io/docs/start/
 
-\- Docker Desktop — https://docs.docker.com/desktop/
+- Docker Desktop — https://docs.docker.com/desktop/
 
 
 
